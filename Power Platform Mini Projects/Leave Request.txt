@@ -1,0 +1,8 @@
+Requester (People) - We can use Created By
+Start Date- Date Time (Date only)
+End Date - Date Time (Date only)
+Type of Leave - Choice (Vacation, Personal Leave, Jury Duty, Medical Leave, To Vote)
+Detail : Multi Line of Text 
+Manager Name (People Column)
+Status [Submitted, Approved, Rejected] Choice
+Manager Comment - Multi line of text 

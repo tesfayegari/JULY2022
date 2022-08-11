@@ -1,0 +1,13 @@
+IF(Condition, WhenTrue,[WhenFalse])
+
+IF(LoggedInUSerEmail=ManagerEmail, Parent.DisplayMode, DisplayMode.Disabled)
+
+Function to check current logged in user in PowerApps is User()
+
+Current User Email=> User().Email
+
+Final Used 
+//Parent.DisplayMode
+//DisplayMode.Disabled
+If(User().Email = ThisItem.'Manager Name'.Email, Parent.DisplayMode, DisplayMode.Disabled)
+
