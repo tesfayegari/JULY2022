@@ -1,3 +1,5 @@
+Reference: https://docs.microsoft.com/en-us/power-platform/power-fx/formula-reference
+
 IF(Condition, WhenTrue,[WhenFalse])
 
 IF(LoggedInUSerEmail=ManagerEmail, Parent.DisplayMode, DisplayMode.Disabled)
@@ -10,4 +12,16 @@ Final Used
 //Parent.DisplayMode
 //DisplayMode.Disabled
 If(User().Email = ThisItem.'Manager Name'.Email, Parent.DisplayMode, DisplayMode.Disabled)
+
+Header Text for the Form: 
+"Leave Request Form" &
+If(SharePointForm1.Mode = FormMode.New, "", " of " & SharePointIntegration.Selected.'Created By'.DisplayName)
+
+To Hode Save Icon from Display: Set the visible property of the Icon with the following
+
+visible = If(SharePointForm1.Mode = FormMode.View,false ,true )
+
+To disable the controls for other than Created by user we use the following formula 
+
+DisplayMode = If(User().Email = ThisItem.'Created By'.Email, Parent.DisplayMode, DisplayMode.Disabled)
 
