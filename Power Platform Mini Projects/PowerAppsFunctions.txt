@@ -1,0 +1,42 @@
+Collection: 
+let a = []
+
+Collection of text ["Text1", "Text2"]
+
+Example 
+ ["Ordered","Processing","Processed","Shipped","Comupleted","Canceled"]
+
+Create Orders Table 
+
+
+
+If(
+    CountRows(products) < 1, Notify("Please add at least one Product", NotificationType.Error); Set(error, true), 
+    IsBlank(OrderIDTextInput.Text) || IsEmpty(OrderIDTextInput.Text), Notify("Order ID is Required", NotificationType.Error);Set(error, true),
+    Patch(Orders,    
+            
+            {
+                Title: OrderIDTextInput.Text,            
+                Products: ForAll(products,
+                                    {       
+                                        '@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",                    
+                                        Value: Title,
+                                        Id: ID
+                                    }
+                                ),
+                'Total Price': totalPrice,
+                Status:{
+                        '@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Value:"Ordered"
+                    },
+                'Customers': {
+                    '@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",                    
+                        Value: CustomersDropdown.Selected.Title,
+                        Id: CustomersDropdown.Selected.ID
+                }
+            
+            }
+        );Set(error, false);Reset(OrderIDTextInput); Reset(CustomersDropdown);Set(totalPrice,0); Clear(products); Navigate(SuccessScreen)
+
+);
+
