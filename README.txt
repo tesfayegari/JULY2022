@@ -27,6 +27,36 @@ images: img  src property is required
 bulleted list: ul, li 
 ordered list: ol li
 div: block element
+span: inline element
+iframe: content from different location 
+
+Form Elements: 
+input: text box, checkbox, password, radio button, button, date picker
+select, option  - dropdown 
+button 
+
+Cascading Style Sheet (CSS)
+
+Synax: 
+selector {
+	property1: value1;
+	property2: value2;
+	}
+
+	Selector can be elements example: p, a, h1, h2.....
+	p {color: red;}
+
+	Selector can be an id attribute of an element, example for id="myID"
+	#myID {color: blue;}
+
+	Selector can be a class attribute of an element, example class="myClass1"
+	.myClass1 {color: green;}
+
+	When element is in a parent element you can target like below 
+	parent1 parent2 element1 {}
+	p span {} -> targetting span in a p element 
+
+
 
 Reference: W3Schools html 
 

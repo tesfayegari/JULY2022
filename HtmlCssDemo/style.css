@@ -1,0 +1,14 @@
+div h2 span {
+  color: blue;
+}
+
+div span {
+  color: red;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p span {
+  color: #f19519;
+}
