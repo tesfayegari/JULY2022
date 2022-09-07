@@ -12,3 +12,31 @@ div span {
 p span {
   color: #f19519;
 }
+
+ul#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+#nav li a:hover, .active, p:hover {
+  background-color: #000;
+  color: #fff;
+}
+ 

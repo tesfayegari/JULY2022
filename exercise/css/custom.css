@@ -1,0 +1,88 @@
+body {
+  padding-top: 50px;
+  color: #959595;
+}
+h1,h2,h3,h4,h5,h6 {
+  color: #dd845a;
+}
+
+.feature {
+  background: url('../images/light_bulb.jpg');
+  background-position: top right;
+  background-size: cover;
+  background-color: #dd845a;
+  color: #fff;
+  text-shadow: 1px 1px 8px #000;
+}
+.feature .btn {
+  text-shadow:none;
+}
+
+/* primary buttons  */
+.btn-primary {
+  color: #fff;
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+.btn-primary:hover, 
+.btn-primary:focus  {
+  color: #fff;
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+/* navbar */
+.navbar-default {
+  background-color: #fff;
+}
+.navbar-default .navbar-brand {
+  color: #dd845a;
+}
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+  color: sienna;
+  background-color: transparent;
+}
+
+/* promo  */
+.promo {
+  border-width: 1px;
+  border-color: #000;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  margin: 20px 0;
+}
+
+.item-1 {
+  background: url('../images/mung_beans.jpg');
+}
+.item-2 {
+  background: url('../images/coffee_beans_1.jpg');
+}
+.item-3 {
+  background: url('../images/grapes.jpg');
+}
+.item-1,.item-2,.item-3 {
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.promo, 
+.promo h3, 
+.promo a:link,
+.promo a:hover,
+.promo a:active {
+  color: #fff;
+  text-shadow:  1px 1px 8px #000;
+  text-decoration: none;
+}
+.promo-item {
+  height: 200px;
+  line-height: 180px;
+  text-align: center;
+}
+.promo-item h3 {
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
