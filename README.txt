@@ -56,6 +56,16 @@ selector {
 	parent1 parent2 element1 {}
 	p span {} -> targetting span in a p element 
 
+	JavaScript/TypeScript Programming language 
+
+	variables 
+	  Data Types 
+	Operations and Operators (on primitive data types)
+	Decission makings (Logical/conditional Operators and statements)
+	Repetition (Looping )
+	Object Oriented Programming 
+	JSON (Java Script Object Notation)
+	Events (click event ....)- Event handling Programming
 
 
 Reference: W3Schools html 
