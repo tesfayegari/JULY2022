@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "all-sp-contents-client-side-solution",
+    "id": "122e354f-666e-4417-a9b0-bda17f3be2c2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Tesfaye Gari",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "all-sp-contents description"
+      },
+      "longDescription": {
+        "default": "all-sp-contents description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "all-sp-contents Feature",
+        "description": "The feature that activates elements of the all-sp-contents solution.",
+        "id": "a883f3f4-2a63-486d-9a10-394abce48c6d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/all-sp-contents.sppkg"
+  }
+}
