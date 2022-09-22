@@ -71,3 +71,45 @@ selector {
 Reference: W3Schools html 
 
 
+SahrePoint REST API EndPoint (SP online url https://tenantName.sharepoint.com/sites/siteName)
+entry point: siteUrl/_api
+Sample: 
+To get Site Information 
+siteUrl/_api/site
+
+Web Information 
+siteUrl/_api/web
+
+Get all lists  (including hidden ones)
+siteUrl/_api/web/lists
+
+Filtering, sorting, selectign specific fields(properties) in REST API (oData)
+example get all non hidden sharepoint lists using oData filter $filter=property operator value 
+siteUrl/_api/web/lists?$filter=Hidden eq false
+
+Specific properties only for all non hidden lists oData to get specific propertis $select=prop1,prop2,..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
