@@ -36,13 +36,13 @@ export default class AllSiteContentsWebPart extends BaseClientSideWebPart<IAllSi
         console.log('Data from SP...', response.value);
         let lists = response.value;
         let listHtml = '';
-        for(let list of lists ){
+        for (let list of lists) {
           listHtml += `
           <div>
             <a class="btn btn-info mb-2" href="#" target="_blank">
               ${list.Title} <span class="badge badge-light">(${list.ItemCount})</span>
             </a>
-          </div>`;            
+          </div>`;
         }
         this.domElement.innerHTML = `
           <section class="${styles.allSiteContents} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
@@ -63,7 +63,7 @@ export default class AllSiteContentsWebPart extends BaseClientSideWebPart<IAllSi
         });
     //End testing
 
-    
+
   }
 
   protected onInit(): Promise<void> {

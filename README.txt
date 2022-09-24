@@ -89,6 +89,50 @@ siteUrl/_api/web/lists?$filter=Hidden eq false
 
 Specific properties only for all non hidden lists oData to get specific propertis $select=prop1,prop2,..
 
+Example get only Title and ItemCount of all sharepoint lists
+siteUrl/_api/web/lists?$filter=Hidden eq false&$select=Title,ItemCount
+
+
+Get one SharePoint List by its title 
+siteUrl/_api/web/lists/getbytitle('ListName')
+
+Get items in a list (returns top 100 items)
+siteUrl/api/web/lists/getbytitle('ListName')/items
+
+Example we have a Birthdays list with columns below 
+Title -single line 
+Employee - Person 
+Day - number 
+Month - number 
+
+To get all the items in this list 
+siteURl/_api/web/lists/getbytitle('Birthdays')/items
+
+When used People or Lookup Column we have to use oData $expand to expand the field
+
+example 
+siteUrl/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$expand=Employee
+
+Filter month = 9 or Month= 10 
+
+siteUrl/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month geq 9 or Month eq 10&$expand=Employee
+
+/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month geq 9&$expand=Employee
+
+With Order by Month example 
+siteUrl/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month ge 9&$expand=Employee&$orderby=Month asc
+
+REACT REUSABLE PNP CONTROLS
+
+React PropertyPaneControls
+https://pnp.github.io/sp-dev-fx-property-controls/#getting-started
+
+React Controls
+https://pnp.github.io/sp-dev-fx-controls-react/#getting-started
+
+
+
+
 
 
 
