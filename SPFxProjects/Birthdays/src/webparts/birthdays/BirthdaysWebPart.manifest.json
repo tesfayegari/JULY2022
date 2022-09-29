@@ -22,7 +22,7 @@
     "description": { "default": "Birthdays description" },
     "officeFabricIconFontName": "BirthdayCake",
     "properties": {
-      "description": "Upcomign Birthdays"
+      "description": "Upcoming Birthdays"
     }
   }]
 }

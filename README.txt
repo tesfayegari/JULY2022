@@ -96,8 +96,15 @@ siteUrl/_api/web/lists?$filter=Hidden eq false&$select=Title,ItemCount
 Get one SharePoint List by its title 
 siteUrl/_api/web/lists/getbytitle('ListName')
 
+Get One Sharepoint list by its ID(GUID) 
+example: 
+siteUrl/_api/web/lists(guid'342b5bce-0c53-4943-a096-2ae878730eef')
+
 Get items in a list (returns top 100 items)
 siteUrl/api/web/lists/getbytitle('ListName')/items
+
+siteUrl/_api/web/lists(guid'342b5bce-0c53-4943-a096-2ae878730eef')/items
+
 
 Example we have a Birthdays list with columns below 
 Title -single line 
@@ -117,7 +124,7 @@ Filter month = 9 or Month= 10
 
 siteUrl/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month geq 9 or Month eq 10&$expand=Employee
 
-/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month geq 9&$expand=Employee
+/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month ge 9&$expand=Employee
 
 With Order by Month example 
 siteUrl/_api/web/lists/getbytitle('Birthdays')/items?$select=*,Employee/Title, Employee/EMail&$filter=Month ge 9&$expand=Employee&$orderby=Month asc
@@ -129,6 +136,30 @@ https://pnp.github.io/sp-dev-fx-property-controls/#getting-started
 
 React Controls
 https://pnp.github.io/sp-dev-fx-controls-react/#getting-started
+
+SharePoint User Profile Picture 
+
+/_layouts/15/userphoto.aspx?size=L&username=joao@handsonsharepoint.com
+
+Options:
+
+Size=S | 48×48 px
+Size=M | 72×72 px
+Size=L | 300×300 px
+Username – replace it by the user email you want to retrieve the photo
+
+
+To Make the webpart ready for SharePoint deployment 
+Prepare web part assets to deploy
+Execute the following task to bundle your solution.
+
+run the following in the Terminal:
+gulp bundle --ship
+
+Execute the following task to package your solution. This creates an updated helloworld-webpart.sppkg package on the sharepoint/solution folder.
+
+run the following in the Terminal:
+gulp package-solution --ship
 
 
 

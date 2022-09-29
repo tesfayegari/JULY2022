@@ -2,5 +2,5 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
   "port": 4321,
   "https": true,
-  "initialPage": "your_sp_Site/_layouts/workbench.aspx"
+  "initialPage": "Your_SP_Site/_layouts/workbench.aspx"
 }
